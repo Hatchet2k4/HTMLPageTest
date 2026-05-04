@@ -1,0 +1,38 @@
+<html>
+	<title>Welcome to Sample Conversion Tracking Site<title>
+			<head>
+				<!--FOR WEBMASTER BEGIN-->
+				<!--SAMPLE CODE-->
+				<script src='https://conversiontracking.campaigner.com/js.min.js'/>
+				<script>
+/*List of all Global Variables for web master reference */
+cc_Duration = 30;
+cc_Amount = 1000.99;
+cc_ReferenceId = 'No References';
+cc_Category = 'No Category';
+cc_Description = 'Sample Web Master HTML Page';
+/*Set Token on page load*/
+j2.campaigner.utilities.setToken(j2.campaigner.pageData.token);
+/*Set Consent without statement on page load*/
+//j2.campaigner.utilities.setConsent('Insert Consent Here'); default is true
+				</script>
+				<!--FOR WEBMASTER END-->
+			</head>
+			<body>
+				<p>
+					<a class="button" onclick="j2.campaigner.utilities.setConsent('Give me some consent.');" href="#">
+Ask for consent with pop-up
+</a>
+				</p>
+				<p>
+					<a class="button" onclick="j2.campaigner.utilities.setConsent();" href="#">
+Click on page to confirm consent
+</a>
+				</p>
+				<p>
+					<a class="button" onclick="ProcessPConversion()" href="#">
+Send Purchase Event
+</a>
+				</p>
+			</body>
+		</html>
