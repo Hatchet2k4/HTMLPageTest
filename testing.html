@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample file for QA testing</title>
     <meta name="robots" content="noindex,nofollow">
+					<script src='https://conversiontracking.campaigner.com/js.min.js' />
+				<script>
+cc_Duration = 30;
+cc_Amount = 1000.99;
+cc_ReferenceId = 'No References';
+cc_Category = 'No Category';
+cc_Description = 'Sample Web Master HTML Page';
+
+j2.campaigner.utilities.setToken(j2.campaigner.pageData.token);
+
+//j2.campaigner.utilities.setConsent('Insert Consent Here'); default is true
+				</script>
+
 </head>
 <body>
     <a href="https://www.freetestdata.com/">Visit Free Test Data for more sample file sizes</a>
@@ -24,6 +37,22 @@
 <li>Curabitur purus felis, iaculis vitae nulla id, efficitur feugiat libero.</li>
 <li>Duis ornare ex sed nisl sollicitudin sollicitudin. In luctus gravida scelerisque</li>
 </ul>
+
+				<p>Section 1<br>
+					<a class="button" onclick="j2.campaigner.utilities.setConsent('Give me some consent.');" href="#">
+Ask for consent with pop-up
+</a>
+				</p>
+				<p>Section 2<br>
+					<a class="button" onclick="j2.campaigner.utilities.setConsent();" href="#">
+Click on page to confirm consent
+</a>
+				</p>
+				<p>Section 3<br>
+					<a class="button" onclick="ProcessPConversion()" href="#">
+Send Purchase Event
+</a>
+
 <p>Vestibulum ut diam magna. Maecenas ut interdum ante, vel volutpat nibh</p>
 <ol>
 <li>Curabitur purus felis, iaculis vitae nulla id, efficitur feugiat libero.</li>
